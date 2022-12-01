@@ -1,15 +1,16 @@
+from __future__ import unicode_literals
+
 import shutil
 from yt_dlp import YoutubeDL
 import json
 import os
 from pinToIPFS import pinToIPFS
 
-
 URLS = 'https://www.youtube.com/watch?v=NwUo8N7depg'
 VIDEO_ID = URLS[-11:]
 print(VIDEO_ID)
 
-ydl_opts = {    'format': 'm4a/bestaudio/best',
+ydl_opts = {    'format': 'm4a/bestaudio/best', 'outtmpl': 'functions/tmp/%(title)s-%(id)s.%(ext)s',
     # ℹ️ See help(yt_dlp.postprocessor) for a list of available Postprocessors and their arguments
     'postprocessors': [{  # Extract audio using ffmpeg
         'key': 'FFmpegExtractAudio',
@@ -17,7 +18,7 @@ ydl_opts = {    'format': 'm4a/bestaudio/best',
     }]}
 
 with YoutubeDL(ydl_opts) as ydl:
-
+    print('%(title)s-%(id)s.%(ext)s')
 
     info = ydl.extract_info(URLS, download=True)
     metadata = json.loads(json.dumps(ydl.sanitize_info(info)))
@@ -48,8 +49,8 @@ with YoutubeDL(ydl_opts) as ydl:
 
     print("moved to the folder")
 
-    cid = pinToIPFS(song_filename)['value']['cid']
-    print("https://ipfs.io/ipfs/"+cid)
-    print(f"https://{cid}.ipfs.nftstorage.link/")
+    # cid = pinToIPFS(song_filename)['value']['cid']
+    # print("https://ipfs.io/ipfs/"+cid)
+    # print(f"https://{cid}.ipfs.nftstorage.link/")
 
 
