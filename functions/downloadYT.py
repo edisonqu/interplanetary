@@ -6,7 +6,7 @@ import json
 import os
 from pinToIPFS import pinToIPFS
 
-URLS = 'https://www.youtube.com/watch?v=NwUo8N7depg'
+URLS = 'https://www.youtube.com/watch?v=5Vsv2tqy1Bs'
 VIDEO_ID = URLS[-11:]
 print(VIDEO_ID)
 
@@ -30,7 +30,6 @@ with YoutubeDL(ydl_opts) as ydl:
                 res.append(os.path.join(root, file))
 
     song_filename = res[0]
-    print(metadata)
 
     try:
         metadata_filename = f'metadeta_{metadata["title"]}.json'
@@ -49,8 +48,15 @@ with YoutubeDL(ydl_opts) as ydl:
 
     print("moved to the folder")
 
-    # cid = pinToIPFS(song_filename)['value']['cid']
-    # print("https://ipfs.io/ipfs/"+cid)
-    # print(f"https://{cid}.ipfs.nftstorage.link/")
+    cid = pinToIPFS(song_filename)['value']['cid']
+
+
+    print("https://ipfs.io/ipfs/"+cid)
+    print(f"https://{cid}.ipfs.nftstorage.link/")
+
+    print(cid)
+
+    # TODO Metadata inside the AWS Bucket
+
 
 
