@@ -6,7 +6,7 @@ import json
 import os
 from pinToIPFS import pinToIPFS
 
-URLS = 'https://www.youtube.com/watch?v=5Vsv2tqy1Bs'
+URLS = 'https://www.youtube.com/watch?v=J_n01uvyhI8 '
 VIDEO_ID = URLS[-11:]
 print(VIDEO_ID)
 
@@ -56,7 +56,6 @@ with YoutubeDL(ydl_opts) as ydl:
 
     print(cid)
 
-    # TODO Metadata inside the AWS Bucket
 
 
 
