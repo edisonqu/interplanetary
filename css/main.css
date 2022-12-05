@@ -7,6 +7,11 @@ body {
   box-sizing: border-box;
 }
 
+h1{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
 .icon {
   display: inline-block;
   width: 1em;
@@ -382,6 +387,24 @@ body {
   transform: scale(0.55);
   pointer-events: none;
   opacity: 0;
+}
+
+.input {
+  height: 35px;
+  font-family: Bitter;
+  color: #6a7897;
+  width: 100%;
+  margin-top: 5px;
+  cursor: pointer;
+  background-color: #d0d8e6;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+h1{
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=main.css.map */

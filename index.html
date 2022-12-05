@@ -13,7 +13,7 @@
       href="https://meyerweb.com/eric/tools/css/reset/reset.css"
     />
     <link rel="stylesheet" href="css/main.css" />
-    <title>Nectar - Joji</title>
+    <title>Interplanetary</title>
     <link rel="icon" type="image/x-icon" href="img/musiczyx.svg">
   </head>
   <body>
@@ -66,6 +66,14 @@
             <div class="progress__current" :style="{ width : barWidth }"></div>
           </div>
           <div class="progress__time">{{ currentTime }}</div>
+          <div>
+<!--            <input class="input" value="Enter your YouTube URL..." name="URL"></form>-->
+            <label for="URL"></label><input type="text" class = "input" value="Enter your YouTube URL..." id = "URL" name="URL">
+            <form @click.prevent="onsubmit()">
+              <input type="submit" class = "input">
+            </form>
+
+          </div>
         </div>
         <div v-cloak></div>
       </div>

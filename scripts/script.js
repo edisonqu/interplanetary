@@ -10,163 +10,78 @@ new Vue({
       isTimerPlaying: false,
       tracks: [
         {
-          name: "Alone",
-          artist:"Marshmello",
-          cover:"https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
-          source:"https://bafybeigikiix3eajwbswo2syxu5a4zgsgl2diowbbocnyn3hic2zhmia7u.ipfs.nftstorage.link/",
-          url: "https://www.youtube.com/watch?v=UGB_Bsm5Unk",
-          favorited: false
-        },
-        {
           name: "Ew",
           artist: "Joji",
           cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
           source: "https://ipfs.io/ipfs/bafybeifj664nr4q4o46tzc42nvdgzn3ceafxfddha7amocaawjvjfcervm",
           url: "https://www.youtube.com/watch?v=UGB_Bsm5Unk",
           favorited: false
-        },
-        {
-          name: "MODUS",
-          artist: "Joji",
-          cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
-          source: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/mp3/MODUS.mp3",
-          url: "https://www.youtube.com/watch?v=2Uxq-kIAMBM",
-          favorited: true
-        },
-        {
-          name: "Tick Tock",
-          artist: "Joji",
-          cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
-          source: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/mp3/Tick Tock.mp3",
-          url: "https://www.youtube.com/watch?v=2FCo7OxVoeY",
-          favorited: false
-        },
-        {
-          name: "Daylight",
-          artist: "Joji, Diplo",
-          cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/Daylight-joji.jpg",
-          source: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/mp3/Daylight.mp3",
-          url: "https://www.youtube.com/watch?v=v97FPN2US2o",
-          favorited: false
-        },
-        {
-          name: "Upgrade",
-          artist: "Joji",
-          cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
-          source: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/mp3/Upgrade.mp3",
-          url: "https://www.youtube.com/watch?v=DoE_le4Te9U",
-          favorited: true
-        },
-        {
-          name: "Gimme Love",
-          artist: "Joji",
-          cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
-          source: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/mp3/Gimme Love.mp3",
-          url: "https://www.youtube.com/watch?v=jPan651rVMs",
-          favorited: false
-        },
-        {
-          name: "Run",
-          artist: "Joji",
-          cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
-          source: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/mp3/Run.mp3",
-          url: "https://www.youtube.com/watch?v=K09_5IsgGe8",
-          favorited: true
-        },
-        {
-          name: "Sanctuary",
-          artist: "Joji",
-          cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
-          source: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/mp3/Sanctuary.mp3",
-          url: "https://www.youtube.com/watch?v=YWN81V7ojOE",
-          favorited: true
-        },
-        {
-          name: "High Hopes (feat. Omar Apollo)",
-          artist: "Joji, Omar Apollo",
-          cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
-          source: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/mp3/High Hopes.mp3",
-          url: "https://www.youtube.com/watch?v=xPS6Tuh880k",
-          favorited: true
-        },
-        {
-          name: "NITROUS",
-          artist: "Joji",
-          cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
-          source: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/mp3/NITROUS.mp3",
-          url: "https://www.youtube.com/watch?v=dHq_AS62ioY",
-          favorited: true
-        },
-        {
-          name: "Pretty Boy (feat. Lil Yachty)",
-          artist: "Joji, Lil Yachty",
-          cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
-          source: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/mp3/Pretty Boy.mp3",
-          url: "https://www.youtube.com/watch?v=Qn5IpWXWub0",
-          favorited: true
-        },
-        {
-          name: "Normal People (feat. rei brown)",
-          artist: "Joji, rei brown",
-          cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
-          source: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/mp3/Pretty Boy.mp3",
-          url: "https://www.youtube.com/watch?v=Qn5IpWXWub0",
-          favorited: true
-        },
-        {
-          name: "Afterthought",
-          artist: "Joji",
-          cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
-          source: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/mp3/Afterthought.mp3",
-          url: "https://www.youtube.com/watch?v=QH9vvwPPBS8",
-          favorited: true
-        },
-        {
-          name: "Mr. Hollywood",
-          artist: "Joji",
-          cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
-          source: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/mp3/Mr. Hollywood.mp3",
-          url: "https://www.youtube.com/watch?v=08xzc6pZ0m8",
-          favorited: true
-        },
-        {
-          name: "777",
-          artist: "Joji",
-          cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
-          source: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/mp3/777.mp3",
-          url: "https://www.youtube.com/watch?v=7Gvh6pIHa_g",
-          favorited: true
-        },
-        {
-          name: "Reanimator (feat. Yves Tumor)",
-          artist: "Joji, Yves Tumor",
-          cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
-          source: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/mp3/Reanimator.mp3",
-          url: "https://www.youtube.com/watch?v=coZdfBrHwxQ",
-          favorited: true
-        },
-        {
-          name: "Like You Do",
-          artist: "Joji",
-          cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
-          source: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/mp3/Like You Do.mp3",
-          url: "https://www.youtube.com/watch?v=Bv-1BnoB75k",
-          favorited: true
-        },
-        {
-          name: "Your Man",
-          artist: "Joji",
-          cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
-          source: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/mp3/Your Man.mp3",
-          url: "https://www.youtube.com/watch?v=RrtkU7i0qD8",
-          favorited: true
         }
+        // },
+        // {
+        //   name: "Tick Tock",
+        //   artist: "Joji",
+        //   cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
+        //   source: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/mp3/Tick Tock.mp3",
+        //   url: "https://www.youtube.com/watch?v=2FCo7OxVoeY",
+        //   favorited: false
+        // },
+        // {
+        //   name: "Daylight",
+        //   artist: "Joji, Diplo",
+        //   cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/Daylight-joji.jpg",
+        //   source: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/mp3/Daylight.mp3",
+        //   url: "https://www.youtube.com/watch?v=v97FPN2US2o",
+        //   favorited: false
+        // },
+        // {
+        //   name: "Gimme Love",
+        //   artist: "Joji",
+        //   cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
+        //   source: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/mp3/Gimme Love.mp3",
+        //   url: "https://www.youtube.com/watch?v=jPan651rVMs",
+        //   favorited: false
+        // },
+        //
+        // {
+        //   name: "Sanctuary",
+        //   artist: "Joji",
+        //   cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
+        //   source: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/mp3/Sanctuary.mp3",
+        //   url: "https://www.youtube.com/watch?v=YWN81V7ojOE",
+        //   favorited: true
+        // },
+        // {
+        //   name: "NITROUS",
+        //   artist: "Joji",
+        //   cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
+        //   source: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/mp3/NITROUS.mp3",
+        //   url: "https://www.youtube.com/watch?v=dHq_AS62ioY",
+        //   favorited: true
+        // },
+        // {
+        //   name: "Pretty Boy (feat. Lil Yachty)",
+        //   artist: "Joji, Lil Yachty",
+        //   cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
+        //   source: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/mp3/Pretty Boy.mp3",
+        //   url: "https://www.youtube.com/watch?v=Qn5IpWXWub0",
+        //   favorited: true
+        // },
+        // {
+        //   name: "Like You Do",
+        //   artist: "Joji",
+        //   cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
+        //   source: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/mp3/Like You Do.mp3",
+        //   url: "https://www.youtube.com/watch?v=Bv-1BnoB75k",
+        //   favorited: true
+        // }
       ],
       currentTrack: null,
       currentTrackIndex: 0,
       transitionName: null
     };
   },
+  
   methods: {
     play() {
       if (this.audio.paused) {
@@ -177,6 +92,40 @@ new Vue({
         this.isTimerPlaying = false;
       }
     },
+    async onsubmit() {
+
+      var ipfsHash;
+      const url = document.getElementById("URL").value
+      console.log(url)
+      alert("Received Song Request" + url)
+      if (url === "Enter your YouTube URL...") {
+        alert("Enter Again")
+      } else {
+        await fetch("https://thv6stbw3kp24elb42iaiemodu0xcvqe.lambda-url.us-east-2.on.aws/ " + url)
+            .then((data) => {
+              data.json().then((data) => {
+
+                console.log('Success:', data);
+                ipfsHash = data["body"]
+                console.log(ipfsHash)
+                this.tracks.push(
+                    {
+                      name: "Alone",
+                      artist: "Marshmello",
+                      cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
+                      source: "https://" + ipfsHash + ".ipfs.nftstorage.link/",
+                      url: "https://www.youtube.com/watch?v=UGB_Bsm5Unk",
+                      favorited: false
+            }
+        )
+              
+              })
+            })
+
+      
+      }
+    }
+    ,
     generateTime() {
       let width = (100 / this.audio.duration) * this.audio.currentTime;
       this.barWidth = width + "%";
