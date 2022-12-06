@@ -104,7 +104,6 @@ new Vue({
         await fetch("https://thv6stbw3kp24elb42iaiemodu0xcvqe.lambda-url.us-east-2.on.aws/ " + url)
             .then((data) => {
               data.json().then((data) => {
-
                 console.log('Success:', data);
                 ipfsHash = data["body"]
                 console.log(ipfsHash)
