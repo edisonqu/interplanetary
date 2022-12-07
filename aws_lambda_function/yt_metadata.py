@@ -1,8 +1,9 @@
 import pytube
-from pytube import YouTube
 
 
-
-def get_metadata(URL):
-    meta = pytube.YouTube(URL).thumbnail_url
-    print(meta)
+async def get_thumbnail(URL):
+    return pytube.YouTube(URL).thumbnail_url
+async def get_artist(URL):
+    return pytube.YouTube(URL).author
+async def get_title(URL):
+    return pytube.YouTube(URL).title

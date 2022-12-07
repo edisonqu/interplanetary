@@ -103,23 +103,42 @@ new Vue({
       } else {
         await fetch("https://thv6stbw3kp24elb42iaiemodu0xcvqe.lambda-url.us-east-2.on.aws/ " + url)
             .then((data) => {
-              data.json().then((data) => {
+              data.json().then( (data) => {
                 console.log('Success:', data);
                 ipfsHash = data["body"]
                 console.log(ipfsHash)
+                URL = url
+                video_id = url.slice(-11)
+                console.log(video_id)
+                fetch("https://jvjrj4.deta.dev/metadata/"+video_id)
+                    .then((response) => {
+                      console.log(response)
+                        response.json().then( (response) => {
+                        console.log(response)
+                        const artist = response["author"]
+                        const title = response["title"]
+                        const cover = response["thumbnail"]
+                        const url = response["url"]
+                        console.log(artist)
+                        console.log(title)
+                        console.log(cover)
+
                 this.tracks.push(
                     {
-                      name: "Alone",
-                      artist: "Marshmello",
-                      cover: "https://raw.githubusercontent.com/akshzyx/playerzyx/master/img/nectar-joji.jpg",
-                      source: "https://" + ipfsHash + ".ipfs.nftstorage.link/",
-                      url: "https://www.youtube.com/watch?v=UGB_Bsm5Unk",
+                      name: title,
+                      artist: artist,
+                      cover: cover,
+                      source: "https://" + ipfsHash + ".ipfs.cf-ipfs.com",
+                      url: url,
                       favorited: false
-            }
-        )
-              
+                    }
+                )
+                      alert("FINISHED UPLOAD")
+
               })
+                       })
             })
+              })
 
       
       }
