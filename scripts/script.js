@@ -1,4 +1,13 @@
+import Deta from 'deta'; // import Deta
+
+// Initialize with a Project Key
+const deta = Deta('project key');
+
+// This how to connect to or create a database.
+const db = deta.Base('simple_db');
+
 new Vue({
+
   el: "#app",
   data() {
     return {
@@ -9,6 +18,7 @@ new Vue({
       currentTime: null,
       isTimerPlaying: false,
       tracks: [
+
         {
           name: "Ew",
           artist: "Joji",
@@ -83,6 +93,9 @@ new Vue({
   },
   
   methods: {
+    load(){
+
+    },
     play() {
       if (this.audio.paused) {
         this.audio.play();
@@ -100,48 +113,58 @@ new Vue({
       alert("Received Song Request" + url)
       if (url === "Enter your YouTube URL...") {
         alert("Enter Again")
-      } else {
-        await fetch("https://thv6stbw3kp24elb42iaiemodu0xcvqe.lambda-url.us-east-2.on.aws/ " + url)
-            .then((data) => {
-              data.json().then( (data) => {
-                console.log('Success:', data);
-                ipfsHash = data["body"]
-                console.log(ipfsHash)
-                URL = url
-                video_id = url.slice(-11)
-                console.log(video_id)
-                fetch("https://jvjrj4.deta.dev/metadata/"+video_id)
-                    .then((response) => {
-                      console.log(response)
-                        response.json().then( (response) => {
-                        console.log(response)
-                        const artist = response["author"]
-                        const title = response["title"]
-                        const cover = response["thumbnail"]
-                        const url = response["url"]
-                        console.log(artist)
-                        console.log(title)
-                        console.log(cover)
-
-                this.tracks.push(
-                    {
-                      name: title,
-                      artist: artist,
-                      cover: cover,
-                      source: "https://" + ipfsHash + ".ipfs.cf-ipfs.com",
-                      url: url,
-                      favorited: false
-                    }
-                )
-                      alert("FINISHED UPLOAD")
-
-              })
-                       })
-            })
-              })
-
-      
       }
+      await db.put({name: "alex", age: 77})
+      let res = await db.fetch();
+      let allItems = res.items;
+
+      // continue fetching until last is not seen
+      allItems.forEach( (item)=>{
+        alert(item)
+          }
+      )
+      // else {
+      //   await fetch("https://thv6stbw3kp24elb42iaiemodu0xcvqe.lambda-url.us-east-2.on.aws/ " + url)
+      //       .then((data) => {
+      //         data.json().then( (data) => {
+      //           console.log('Success:', data);
+      //           ipfsHash = data["body"]
+      //           console.log(ipfsHash)
+      //           URL = url
+      //           video_id = url.slice(-11)
+      //           console.log(video_id)
+      //           fetch("https://jvjrj4.deta.dev/metadata/"+video_id)
+      //               .then((response) => {
+      //                 console.log(response)
+      //                   response.json().then( (response) => {
+      //                   console.log(response)
+      //                   const artist = response["author"]
+      //                   const title = response["title"]
+      //                   const cover = response["thumbnail"]
+      //                   const url = response["url"]
+      //                   console.log(artist)
+      //                   console.log(title)
+      //                   console.log(cover)
+      //
+      //           this.tracks.push(
+      //               {
+      //                 name: title,
+      //                 artist: artist,
+      //                 cover: cover,
+      //                 source: "https://" + ipfsHash + ".ipfs.cf-ipfs.com",
+      //                 url: url,
+      //                 favorited: false
+      //               }
+      //           )
+      //                 alert("FINISHED UPLOAD")
+      //
+      //         })
+      //                  })
+      //       })
+      //         })
+      //
+      //
+      // }
     }
     ,
     generateTime() {
